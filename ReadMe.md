@@ -35,6 +35,11 @@ The only library I plan to use is Canvas, to make shapes on the page
 
 ![mockup](./fruit_loops_mockup.jpg?raw=true "Fruit Loops Mockup")
 
+    • fruits on the top represent different instruments
+    • colored tiles below represent different notes and will appear/disappear as you select a fruit
+    • the playhead below that will scroll across as the loop is played (when the user presses the play button)
+    • the empty sqaures below that are where the user will place tiles to have the sounds play at a certain part of the loop
+    • (in this example the user has placed the "blue" note of the "orange" instrument in various spots)
 
 ## Tentative Schedule:
 
