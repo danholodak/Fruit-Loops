@@ -1,0 +1,1 @@
+{"version":3,"file":"main.css","mappings":"AACA,MACI,YAFO,C","sources":["webpack://javascript-project/./src/styles/example.scss"],"sourcesContent":["$variable: purple;\n#main{\n    color: $variable;\n}\n"],"names":[],"sourceRoot":""}
