@@ -1,3 +1,228 @@
-#main{color:purple}
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
-/*# sourceMappingURL=main.css.map*/
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+h1 img {
+  margin: 20px;
+  width: 75%;
+  background-color: transparent;
+}
+
+h2 {
+  font-family: sans-serif;
+  font-size: x-large;
+  color: #8C1F66;
+  text-shadow: 2px 2px 5px #fdb271;
+  text-align: center;
+  font-weight: 900;
+}
+
+div {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+div #instruments {
+  width: 75%;
+  display: flex;
+  height: 60px;
+  justify-content: space-around;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+div #instruments li {
+  border-radius: 30px;
+  font-size: 60px;
+  width: 70px;
+  text-align: center;
+  text-shadow: 2px 2px 10px black;
+}
+div #instruments li:hover {
+  font-size: 65px;
+  cursor: pointer;
+}
+div #instruments li:active {
+  font-size: 55px;
+}
+div #instruments li.selected {
+  text-shadow: 0px 0px 20px #51f8f8;
+}
+div ul.notes {
+  width: 75%;
+  display: flex;
+  height: 60px;
+  justify-content: space-around;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+div ul.notes li {
+  padding-top: 13px;
+  border-radius: 10px;
+  font-size: 40px;
+  width: 70px;
+  text-align: center;
+  background-color: #F25041;
+  box-shadow: 2px 2px 10px black;
+}
+div ul.notes li:hover {
+  font-size: 45px;
+  cursor: pointer;
+}
+div ul.notes li:active {
+  font-size: 35px;
+}
+div ul.notes li.selected {
+  box-shadow: 0px 0px 20px #51f8f8;
+}
+div ul.hidden {
+  display: none;
+}
+
+body {
+  background-color: #F29544;
+}
+
+div.tile-board-and-playbar {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+div.tile-board-and-playbar ul.tile-board {
+  display: flex;
+}
+div.tile-board-and-playbar ul.tile-board ul.tile-column {
+  display: flex;
+  flex-direction: column;
+}
+div.tile-board-and-playbar ul.tile-board ul.tile-column li.tile {
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #d2823c;
+  font-size: small;
+  box-shadow: 2px 2px 10px black;
+}
+
+li.empty {
+  background: rgb(245, 165, 95);
+  background: radial-gradient(circle, rgb(242, 149, 68) 0%, rgb(171, 101, 39) 100%);
+}
+
+li.c {
+  background: rgb(51, 166, 166);
+  background: linear-gradient(0deg, rgb(51, 166, 166) 0%, rgb(242, 80, 65) 100%);
+}
+
+li.d {
+  background: rgb(242, 80, 65);
+  background: linear-gradient(0deg, rgb(242, 80, 65) 0%, rgb(176, 59, 48) 100%);
+}
+
+li.e {
+  background: rgb(140, 31, 102);
+  background: linear-gradient(0deg, rgb(140, 31, 102) 0%, rgb(50, 54, 115) 100%);
+}
+
+li.f {
+  background: rgb(51, 166, 166);
+  background: linear-gradient(0deg, rgb(51, 166, 166) 0%, rgb(50, 54, 115) 100%);
+}
+
+li.g {
+  background: rgb(50, 54, 115);
+  background: linear-gradient(0deg, rgb(50, 54, 115) 0%, rgb(242, 80, 65) 100%);
+}
+
+li.a {
+  background: rgb(242, 149, 68);
+  background: linear-gradient(0deg, rgb(242, 149, 68) 0%, rgb(140, 31, 102) 100%);
+}
+
+li.b {
+  background: rgb(140, 31, 102);
+  background: linear-gradient(0deg, rgb(140, 31, 102) 0%, rgb(242, 80, 65) 100%);
+}
+
+li.cc {
+  background: rgb(242, 80, 65);
+  background: linear-gradient(0deg, rgb(242, 80, 65) 0%, rgb(51, 166, 166) 100%);
+}
+
+div.playbar {
+  height: 6px;
+  border-radius: 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: rgb(171, 101, 39);
+  background: linear-gradient(0deg, rgb(171, 101, 39) 0%, rgb(242, 149, 68) 49%, rgb(171, 101, 39) 100%);
+}
+div.playbar img {
+  width: 20px;
+  display: block;
+  align-self: flex-start;
+}
+
+div#main-content {
+  width: 1000px;
+  margin: auto;
+}

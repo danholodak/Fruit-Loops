@@ -1,0 +1,177 @@
+$color1: #F29544;
+$color2: #33A6A6;
+$color3: #F25041;
+$color4: #323673;
+$color5: #8C1F66;
+
+h1{
+    display: flex;
+    justify-content: center;
+    img{
+        // box-shadow: 10px 10px 20px 10px black;
+        margin: 20px;
+        width: 75%;
+        background-color: transparent;
+    }
+}
+h2{
+    font-family: sans-serif;
+    font-size: x-large;
+    color: $color5;
+    text-shadow: 2px 2px 5px #fdb271;
+    text-align: center;
+    font-weight: 900;
+}
+div{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    #instruments{
+        width: 75%;
+        display: flex;
+        height: 60px;
+        justify-content: space-around;
+        margin: 10px;
+        flex-wrap: wrap;
+        
+        // flex-wrap: wrap;
+        // flex-direction: row;
+        li{
+            border-radius: 30px;
+            font-size: 60px;
+            width: 70px;
+            text-align: center;
+            text-shadow: 2px 2px 10px black;
+            
+        }
+        li:hover{
+            font-size: 65px;
+            cursor: pointer;
+        }
+        li:active{
+            font-size: 55px;
+        }
+        li.selected{
+            text-shadow: 0px 0px 20px #51f8f8;
+            
+        }
+    }
+    ul.notes{
+        width: 75%;
+        display: flex;
+        height: 60px;
+        justify-content: space-around;
+        margin: 10px;
+        flex-wrap: wrap;
+        li{
+            padding-top: 13px;
+            border-radius: 10px;
+            font-size: 40px;
+            width: 70px;
+            text-align: center;
+            background-color: $color3;
+            box-shadow: 2px 2px 10px black;
+            
+        }
+        li:hover{
+            font-size: 45px;
+            cursor: pointer;
+        }
+        li:active{
+            font-size: 35px;
+        }
+        li.selected{
+            box-shadow: 0px 0px 20px #51f8f8;
+            
+        }
+        
+        
+    }
+    ul.hidden{
+        display: none;
+    }
+
+}
+body{
+    background-color: $color1;
+    
+}
+div.tile-board-and-playbar{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    ul.tile-board{
+        display: flex;
+        ul.tile-column{
+            display: flex;
+            flex-direction: column;
+            li.tile{
+                width: 35px;
+                height: 35px;
+                margin: 5px;
+                border-radius: 5px;
+                border: 1px solid #d2823c;
+                font-size: small;
+                box-shadow: 2px 2px 10px black;
+            }
+        }
+        
+    }
+}
+li.empty{
+    background: rgb(245, 165, 95);
+    background: radial-gradient(circle, rgba(242,149,68,1) 0%, rgba(171,101,39,1) 100%);
+}
+li.c{
+    background: rgb(51,166,166);
+    background: linear-gradient(0deg, rgba(51,166,166,1) 0%, rgba(242,80,65,1) 100%);
+}
+li.d{
+    background: rgb(242,80,65);
+    background: linear-gradient(0deg, rgba(242,80,65,1) 0%, rgb(176, 59, 48) 100%);
+}
+li.e{
+    background: rgb(140,31,102);
+    background: linear-gradient(0deg, rgba(140,31,102,1) 0%, rgba(50,54,115,1) 100%);
+
+}
+li.f{
+    background: rgb(51,166,166);
+    background: linear-gradient(0deg, rgba(51,166,166,1) 0%, rgba(50,54,115,1) 100%); 
+}
+li.g{
+    background: rgb(50,54,115);
+    background: linear-gradient(0deg, rgba(50,54,115,1) 0%, rgba(242,80,65,1) 100%);
+}
+li.a{
+    background: rgb(242,149,68);
+    background: linear-gradient(0deg, rgba(242,149,68,1) 0%, rgba(140,31,102,1) 100%); 
+}
+li.b{
+    background: rgb(140,31,102);
+    background: linear-gradient(0deg, rgba(140,31,102,1) 0%,rgba(242,80,65,1) 100%)
+}
+li.cc{
+    background: rgb(242,80,65);
+    background: linear-gradient(0deg, rgba(242,80,65,1) 0%, rgba(51,166,166,1) 100%);
+}
+div.playbar{
+    height: 6px;
+    border-radius: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: rgb(171,101,39);
+    background: linear-gradient(0deg, rgba(171,101,39,1) 0%, rgba(242,149,68,1) 49%, rgba(171,101,39,1) 100%);
+    img{
+        width: 20px;
+        display: block;
+        align-self: flex-start;
+    }
+}
+div#main-content{
+    width: 1000px;
+    margin: auto;
+}
