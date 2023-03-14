@@ -1,0 +1,32 @@
+ul.notes{
+    width: 75%;
+    display: flex;
+    height: 60px;
+    justify-content: space-around;
+    margin: 10px;
+    flex-wrap: wrap;
+    li{
+        padding-top: 13px;
+        border-radius: 10px;
+        font-size: 40px;
+        width: 70px;
+        text-align: center;
+        background-color: $color3;
+        box-shadow: 2px 2px 10px black;
+        
+    }
+    li:hover{
+        font-size: 45px;
+        cursor: pointer;
+    }
+    li:active{
+        font-size: 35px;
+    }
+    li.selected{
+        box-shadow: 0px 0px 20px #51f8f8;
+        
+    }
+}
+ul.hidden{
+    display: none;
+}

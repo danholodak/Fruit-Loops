@@ -1,0 +1,41 @@
+li.empty{
+    background: $color3;
+    background: radial-gradient(circle, $color3 0%, #bc382c 100%);
+}
+li.c{
+    background: rgb(51,166,166);
+    background: linear-gradient(0deg, rgba(51,166,166,1) 0%, rgba(242,80,65,1) 100%);
+}
+li.d{
+    background: rgb(242,80,65);
+    background: linear-gradient(0deg, rgba(242,80,65,1) 0%, rgb(176, 59, 48) 100%);
+}
+li.e{
+    background: rgb(140,31,102);
+    background: linear-gradient(0deg, rgba(140,31,102,1) 0%, rgba(50,54,115,1) 100%);
+
+}
+li.f{
+    background: rgb(51,166,166);
+    background: linear-gradient(0deg, rgba(51,166,166,1) 0%, rgba(50,54,115,1) 100%); 
+}
+li.g{
+    background: rgb(50,54,115);
+    background: linear-gradient(0deg, rgba(50,54,115,1) 0%, rgba(242,80,65,1) 100%);
+}
+li.a{
+    background: rgb(242,149,68);
+    background: linear-gradient(0deg, rgba(242,149,68,1) 0%, rgba(140,31,102,1) 100%); 
+}
+li.b{
+    background: rgb(140,31,102);
+    background: linear-gradient(0deg, rgba(140,31,102,1) 0%,rgba(242,80,65,1) 100%)
+}
+li.cc{
+    background: rgb(242,80,65);
+    background: linear-gradient(0deg, rgba(242,80,65,1) 0%, rgba(51,166,166,1) 100%);
+}
+div#main-content{
+    width: 1000px;
+    margin: auto;
+}

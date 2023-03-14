@@ -1,0 +1,27 @@
+ul#instruments{
+    width: 75%;
+    display: flex;
+    height: 60px;
+    justify-content: space-around;
+    margin: 10px;
+    flex-wrap: wrap;
+    li{
+        border-radius: 30px;
+        font-size: 60px;
+        width: 70px;
+        text-align: center;
+        text-shadow: 2px 2px 10px black;
+        
+    }
+    li:hover{
+        font-size: 65px;
+        cursor: pointer;
+    }
+    li:active{
+        font-size: 55px;
+    }
+    li.selected{
+        text-shadow: 0px 0px 20px #51f8f8;
+        
+    }
+}

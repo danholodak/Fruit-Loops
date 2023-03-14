@@ -85,7 +85,12 @@ div {
   align-items: center;
   flex-wrap: wrap;
 }
-div #instruments {
+
+body {
+  background-color: #F29544;
+}
+
+ul#instruments {
   width: 75%;
   display: flex;
   height: 60px;
@@ -93,24 +98,25 @@ div #instruments {
   margin: 10px;
   flex-wrap: wrap;
 }
-div #instruments li {
+ul#instruments li {
   border-radius: 30px;
   font-size: 60px;
   width: 70px;
   text-align: center;
   text-shadow: 2px 2px 10px black;
 }
-div #instruments li:hover {
+ul#instruments li:hover {
   font-size: 65px;
   cursor: pointer;
 }
-div #instruments li:active {
+ul#instruments li:active {
   font-size: 55px;
 }
-div #instruments li.selected {
+ul#instruments li.selected {
   text-shadow: 0px 0px 20px #51f8f8;
 }
-div ul.notes {
+
+ul.notes {
   width: 75%;
   display: flex;
   height: 60px;
@@ -118,7 +124,7 @@ div ul.notes {
   margin: 10px;
   flex-wrap: wrap;
 }
-div ul.notes li {
+ul.notes li {
   padding-top: 13px;
   border-radius: 10px;
   font-size: 40px;
@@ -127,50 +133,19 @@ div ul.notes li {
   background-color: #F25041;
   box-shadow: 2px 2px 10px black;
 }
-div ul.notes li:hover {
+ul.notes li:hover {
   font-size: 45px;
   cursor: pointer;
 }
-div ul.notes li:active {
+ul.notes li:active {
   font-size: 35px;
 }
-div ul.notes li.selected {
+ul.notes li.selected {
   box-shadow: 0px 0px 20px #51f8f8;
 }
-div ul.hidden {
+
+ul.hidden {
   display: none;
-}
-
-body {
-  background-color: #F29544;
-}
-
-div.tile-board-and-playbar {
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-}
-div.tile-board-and-playbar ul.tile-board {
-  display: flex;
-}
-div.tile-board-and-playbar ul.tile-board ul.tile-column {
-  display: flex;
-  flex-direction: column;
-}
-div.tile-board-and-playbar ul.tile-board ul.tile-column li.tile {
-  width: 35px;
-  height: 35px;
-  margin: 5px;
-  border-radius: 5px;
-  border: 1px solid #323673;
-  font-size: large;
-  box-shadow: 2px 2px 10px black;
-}
-div.tile-board-and-playbar ul.tile-board ul.tile-column li:hover {
-  cursor: pointer;
-}
-div.tile-board-and-playbar ul.tile-board ul.tile-column li.glow {
-  box-shadow: 0px 0px 10px #56f9f9;
 }
 
 li.empty {
@@ -218,7 +193,39 @@ li.cc {
   background: linear-gradient(0deg, rgb(242, 80, 65) 0%, rgb(51, 166, 166) 100%);
 }
 
-div.playbar {
+div#main-content {
+  width: 1000px;
+  margin: auto;
+}
+
+div.tile-board-and-playbar {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+div.tile-board-and-playbar ul.tile-board {
+  display: flex;
+}
+div.tile-board-and-playbar ul.tile-board ul.tile-column {
+  display: flex;
+  flex-direction: column;
+}
+div.tile-board-and-playbar ul.tile-board ul.tile-column li.tile {
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #323673;
+  font-size: large;
+  box-shadow: 2px 2px 10px black;
+}
+div.tile-board-and-playbar ul.tile-board ul.tile-column li:hover {
+  cursor: pointer;
+}
+div.tile-board-and-playbar ul.tile-board ul.tile-column li.glow {
+  box-shadow: 0px 0px 10px #56f9f9;
+}
+div.tile-board-and-playbar div.playbar {
   height: 6px;
   border-radius: 2px;
   margin-top: 10px;
@@ -229,18 +236,13 @@ div.playbar {
   justify-content: flex-start;
   align-items: baseline;
 }
-div.playbar img {
+div.tile-board-and-playbar div.playbar img {
   width: 25px;
   display: block;
   align-self: flex-start;
   position: relative;
   bottom: 8px;
   right: 4px;
-}
-
-div#main-content {
-  width: 1000px;
-  margin: auto;
 }
 
 button {
