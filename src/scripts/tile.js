@@ -5,6 +5,8 @@ class Tile{
         this.populate();
         this.clickHandler = this.clickHandler.bind(this);
         this.element.addEventListener("click", this.clickHandler);
+        this.glow = this.glow.bind(this);
+        this.deglow = this.deglow.bind(this);
     }
 
     populate(){
@@ -21,7 +23,7 @@ class Tile{
         if (!this.element.classList.contains('empty')){
             // debugger
             this.audio = null;
-            this.element.classList = ["tile empty"]
+            this.element.classList = ["empty tile"]
             this.element.innerText = ""
         }else{
             let selectedSound = document.querySelector("ul.notes li.selected")
@@ -29,15 +31,21 @@ class Tile{
                 let selectedNote = selectedSound.classList[0]
                 this.element.classList.add(selectedNote);
                 this.element.classList.remove("empty");
+                this.element.classList.add("active");
                 this.element.innerText = selectedSound.innerText;
                 let instrument = selectedSound.parentElement.id;
-                this.audio = new Audio(`/Users/danholodak/Documents/coding/app_academy/JavascriptProject/src/sounds/${instrument}/${selectedNote}.mp3`)
+                this.audio = new Audio(`../src/sounds/${instrument}/${selectedNote}.mp3`)
             }
             
         }
     }
-    playbarHandler(){
-
+    glow(){
+        this.element.classList.add("glow")
+        setTimeout(this.deglow, 200)
+    }
+    deglow(){
+        // debugger
+        this.element.classList.remove("glow")
     }
 
 }

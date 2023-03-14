@@ -74,6 +74,10 @@ h2 {
   font-weight: 900;
 }
 
+h2.hidden {
+  display: none;
+}
+
 div {
   display: flex;
   width: 100%;
@@ -158,14 +162,20 @@ div.tile-board-and-playbar ul.tile-board ul.tile-column li.tile {
   height: 35px;
   margin: 5px;
   border-radius: 5px;
-  border: 1px solid #d2823c;
-  font-size: small;
+  border: 1px solid #323673;
+  font-size: large;
   box-shadow: 2px 2px 10px black;
+}
+div.tile-board-and-playbar ul.tile-board ul.tile-column li:hover {
+  cursor: pointer;
+}
+div.tile-board-and-playbar ul.tile-board ul.tile-column li.glow {
+  box-shadow: 0px 0px 10px #56f9f9;
 }
 
 li.empty {
-  background: rgb(245, 165, 95);
-  background: radial-gradient(circle, rgb(242, 149, 68) 0%, rgb(171, 101, 39) 100%);
+  background: #F25041;
+  background: radial-gradient(circle, #F25041 0%, #bc382c 100%);
 }
 
 li.c {
@@ -215,14 +225,68 @@ div.playbar {
   margin-bottom: 10px;
   background: rgb(171, 101, 39);
   background: linear-gradient(0deg, rgb(171, 101, 39) 0%, rgb(242, 149, 68) 49%, rgb(171, 101, 39) 100%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
 }
 div.playbar img {
-  width: 20px;
+  width: 25px;
   display: block;
   align-self: flex-start;
+  position: relative;
+  bottom: 8px;
+  right: 4px;
 }
 
 div#main-content {
   width: 1000px;
   margin: auto;
+}
+
+button {
+  border-radius: 12px;
+  background-color: #8C1F66;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 900;
+  padding: 5px;
+  border-width: 4px;
+  border-bottom-color: #631648;
+  border-right-color: #631648;
+  border-left-color: #d24fa4;
+  border-top-color: #d24fa4;
+}
+
+button:hover {
+  background-color: #b43387;
+  cursor: pointer;
+  border-bottom-color: #631648;
+  border-right-color: #631648;
+  border-left-color: #d756aa;
+  border-top-color: #d756aa;
+}
+
+button:active {
+  background-color: #323673;
+  border-bottom-color: #484d90;
+  border-right-color: #484d90;
+  border-left-color: #1c1f4c;
+  border-top-color: #1c1f4c;
+}
+
+div.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+section#bpm-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+section#bpm-control button {
+  margin-left: 10px;
+  margin-right: 10px;
 }

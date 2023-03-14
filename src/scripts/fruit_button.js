@@ -38,7 +38,7 @@ class FruitButton{
             let note = document.createElement('li')
             let options = {emoji: emoj, id: val,
                 parent: notesUl, element: note, 
-                audio: new Audio(`/Users/danholodak/Documents/coding/app_academy/JavascriptProject/src/sounds/${instrument}/${val}.mp3`)}
+                audio: new Audio(`../src/sounds/${instrument}/${val}.mp3`)}
             new NoteButton(options)
             note.innerText = emoj
             note.classList.add(val)
@@ -50,7 +50,9 @@ class FruitButton{
 
     clickHandler(){
         // console.log(`${this.emoji} clicked`)
-        let allfruits = document.querySelectorAll(".fruit")
+        let h2 = document.querySelector("#select-note");
+        h2.classList.remove("hidden");
+        let allfruits = document.querySelectorAll(".fruit");
         allfruits.forEach(function(fruit){
             fruit.classList.remove('selected');
         })
