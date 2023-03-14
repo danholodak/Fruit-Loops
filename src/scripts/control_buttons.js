@@ -5,7 +5,7 @@ class ControlButtons{
         this.tileboard = options.tileboard;
         this.playing = false;
         this.bpms = 90;
-        this.ms = ((.04/this.bpms)* 60000);
+        this.ms = ((.04/this.bpms)* 60000); //equation converts bpms to ms per % of playbar crossed
         this.populate();
         //for animation
         this.pos = 0;
@@ -22,7 +22,6 @@ class ControlButtons{
         this.clearBoard.addEventListener("click", this.clearTheBoard);
     }
     clearTheBoard(){
-        console.log("clearing")
         for (let i=0; i< this.tileboard.columns.length; i++){
             this.tileboard.columns[i].tileChildren.forEach(function(child){
                 child.audio = null;
@@ -84,7 +83,7 @@ class ControlButtons{
         this.playhead = document.querySelector("img.playhead")
         this.playing = !this.playing;
         this.playing? this.PPElement.innerText = 'Pause' : this.PPElement.innerText = 'Play';
-        console.log(this.playing? "playing" : "pausing")
+        //console.log(this.playing? "playing" : "pausing")
         frame = frame.bind(this);
         if (this.playing){
             this.interval = setInterval(frame, this.ms);

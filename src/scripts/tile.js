@@ -12,19 +12,15 @@ class Tile{
     populate(){
         let li = document.createElement('li')
         this.element = li
-        li.classList.add("empty");
-        li.classList.add("tile")
+        this.element.classList = ["empty tile"];
         this.parentEl.appendChild(li)
-
     }
 
     clickHandler(){
-        console.log("clicked")
         if (!this.element.classList.contains('empty')){
-            // debugger
             this.audio = null;
-            this.element.classList = ["empty tile"]
-            this.element.innerText = ""
+            this.element.classList = ["empty tile"];
+            this.element.innerText = "";
         }else{
             let selectedSound = document.querySelector("ul.notes li.selected")
             if (selectedSound){
@@ -44,9 +40,7 @@ class Tile{
         setTimeout(this.deglow, 200)
     }
     deglow(){
-        // debugger
         this.element.classList.remove("glow")
     }
-
 }
 export default Tile
