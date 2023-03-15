@@ -7,6 +7,7 @@ class Tile{
         this.element.addEventListener("click", this.clickHandler);
         this.glow = this.glow.bind(this);
         this.deglow = this.deglow.bind(this);
+        this.played = false;
     }
 
     populate(){

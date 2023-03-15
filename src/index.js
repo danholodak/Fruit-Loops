@@ -6,8 +6,11 @@ import TileBoard from "./scripts/tile_board"
 import PlayBar from "./scripts/play_bar"
 import ControlButtons from "./scripts/control_buttons";
 import Instruction from "./scripts/instruction"
-const tileboards = [];
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
+    const tileboards = [];
     let options ={closebutton: document.querySelector("button.close"), 
     startbutton: document.querySelector("button.start"), 
     box: document.querySelector("section.instructions")};
@@ -19,12 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let parentEl = document.querySelector(".tile-board-and-playbar");
     options = {parentEl: parentEl};
     for (let i=0; i<numMeasures; i++){
-        options = {id: i, parentEl: parentEl};
         new PlayBar(options);
         let tileboard = new TileBoard(options);
         tileboards.push(tileboard);
     }
     options = {parentEl: parentEl, tileboard: tileboards[0]}
     new ControlButtons(options);
-    
 });

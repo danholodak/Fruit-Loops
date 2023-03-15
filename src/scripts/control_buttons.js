@@ -25,25 +25,25 @@ class ControlButtons{
         for (let i=0; i< this.tileboard.columns.length; i++){
             this.tileboard.columns[i].tileChildren.forEach(function(child){
                 child.audio = null;
-                child.element.classList = ["empty tile"]
-                child.element.innerText = ""
+                child.element.classList = ["empty tile"];
+                child.element.innerText = "";
             })
         }
     }
     bpmClickHandler(evt){
         if (evt.target.id === "+"){
             if (this.bpms < 200){
-                this.bpms += 10
+                this.bpms += 10;
             }
         }else if (evt.target.id === "-"){
             if (this.bpms > 60){
-                this.bpms -= 10
+                this.bpms -= 10;
             }
         }
-        this.bpmsdisplay.innerText = `${this.bpms} BPMs`
+        this.bpmsdisplay.innerText = `${this.bpms} BPMs`;
         this.ms = ((.04/this.bpms)* 60000);
-        this.PPclickHandler()
-        this.PPclickHandler()
+        this.PPclickHandler();
+        this.PPclickHandler();
     }
     populate(){
         let buttonCenter = document.createElement('div')
@@ -69,7 +69,7 @@ class ControlButtons{
         plus.innerText = ' + ';
         plus.id = "+";
         let bpmdiv = document.createElement('section')
-        bpmdiv.id = "bpm-control"
+        bpmdiv.id = "bpm-control";
         bpmdiv.append(minus);
         bpmdiv.append(bpms);
         bpmdiv.append(plus);
@@ -80,7 +80,7 @@ class ControlButtons{
         this.element.append(clearBoard);
     }
     PPclickHandler(){
-        this.playhead = document.querySelector("img.playhead")
+        this.playhead = document.querySelector("img.playhead");
         this.playing = !this.playing;
         this.playing? this.PPElement.innerText = 'Pause' : this.PPElement.innerText = 'Play';
         //console.log(this.playing? "playing" : "pausing")
@@ -91,14 +91,22 @@ class ControlButtons{
             clearInterval(this.interval);
         }
         function frame(){
+            if (this.pos===0){
+                for(let i=0; i<this.tileboard.columns.length; i++){
+                    this.tileboard.columns[i].tileChildren.forEach(function(child){
+                        child.played = false;
+                    })
+                }
+            }
             if (this.pos < 99) {
                 this.pos++;
                 this.playhead.style.marginLeft = this.pos + "%"; 
-                let section = Math.floor(this.pos/6.25)
+                let section = Math.floor(this.pos/6.25);
                 this.tileboard.columns[section].tileChildren.forEach(function(child){
-                    if (child.audio){
-                        child.audio.play()
-                        child.glow()
+                    if (child.audio && !child.played){
+                        child.audio.play();
+                        child.glow();
+                        child.played = true;
                     }
                 }) 
                 

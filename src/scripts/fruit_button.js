@@ -1,5 +1,5 @@
 import NoteButton from "./note_button";
-import Label from "./label"
+import Label from "./label.js"
 const notes = ['c','d','e','f','g','a','b','cc']
 
 class FruitButton{
@@ -7,7 +7,6 @@ class FruitButton{
         this.emoji = options.emoji;
         this.selected = options.selected;
         this.value = options.value
-        this.id = options.id
         this.populate()
         this.clickHandler = this.clickHandler.bind(this);
         this.element.addEventListener("click", this.clickHandler);
@@ -31,7 +30,6 @@ class FruitButton{
         let li = document.createElement('li');
         this.element = li;
         li.innerText = this.emoji;
-        li.id = this.id;
         if (this.selected){
             li.classList.add('selected');
         }

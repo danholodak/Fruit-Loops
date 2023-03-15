@@ -8,6 +8,12 @@ section.instructions{
     height: 700px;
     top: 20px;
     border-radius: 15px;
+    strong{
+        color: $color3;
+        -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+        text-shadow: 0px 0px 10px white;
+    }
     button.close{
         position: absolute;
         top: 30px;
