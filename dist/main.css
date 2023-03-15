@@ -99,6 +99,7 @@ ul#instruments {
   flex-wrap: wrap;
 }
 ul#instruments li {
+  position: relative;
   border-radius: 30px;
   font-size: 60px;
   width: 70px;
@@ -291,4 +292,100 @@ section#bpm-control {
 section#bpm-control button {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+section.instructions {
+  background-color: rgba(50, 54, 115, 0.65);
+  color: white;
+  position: absolute;
+  z-index: 1;
+  border: 3px solid #F25041;
+  width: 900px;
+  height: 700px;
+  top: 20px;
+  border-radius: 15px;
+}
+section.instructions button.close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+section.instructions button.start {
+  position: relative;
+  margin-top: 50px;
+  margin-left: 370px;
+  font-size: x-large;
+}
+section.instructions h1 {
+  font-size: 90px;
+  font-family: sans-serif;
+  font-weight: 900;
+  position: relative;
+  margin-top: 50px;
+  text-shadow: 2px 2px 10px black;
+}
+section.instructions h2 {
+  color: white;
+  text-shadow: none;
+  position: relative;
+  text-shadow: 2px 2px 10px black;
+}
+section.instructions h2.fruit-pointer {
+  position: absolute;
+  top: 165px;
+  left: 200px;
+}
+section.instructions h2.button-pointer {
+  position: absolute;
+  top: 257px;
+  left: 339px;
+  font-size: small;
+}
+section.instructions h2.tileboard-pointer {
+  position: absolute;
+  top: 380px;
+  left: 100px;
+}
+section.instructions h2.play-pause {
+  position: absolute;
+  top: 325px;
+  left: 200px;
+  font-size: medium;
+}
+section.instructions h2.happy {
+  position: relative;
+  margin-top: 300px;
+  font-size: xx-large;
+}
+
+section.hidden {
+  display: none;
+}
+
+div.label div.box {
+  height: fit-content;
+  width: fit-content;
+  background-color: #323673;
+  position: absolute;
+  border-radius: 10px;
+  border: 2px solid #F25041;
+  top: -60px;
+}
+div.label div.box h2 {
+  color: white;
+  text-shadow: none;
+  padding: 10px 15px;
+}
+div.label div.box div.point {
+  width: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 20px solid #323673;
+  position: absolute;
+  top: 90%;
+  left: 30%;
+}
+
+div.hidden {
+  display: none;
 }

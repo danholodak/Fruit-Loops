@@ -6,12 +6,12 @@ ul#instruments{
     margin: 10px;
     flex-wrap: wrap;
     li{
+        position: relative;
         border-radius: 30px;
         font-size: 60px;
         width: 70px;
         text-align: center;
         text-shadow: 2px 2px 10px black;
-        
     }
     li:hover{
         font-size: 65px;

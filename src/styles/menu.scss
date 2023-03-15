@@ -1,0 +1,66 @@
+section.instructions{
+    background-color: rgb($color4, .65);
+    color: white;
+    position: absolute;
+    z-index: 1;
+    border: 3px solid $color3;
+    width: 900px;
+    height: 700px;
+    top: 20px;
+    border-radius: 15px;
+    button.close{
+        position: absolute;
+        top: 30px;
+        right: 30px
+    }
+    button.start{
+        position: relative;
+        margin-top: 50px;
+        margin-left: 370px;
+        font-size: x-large;
+    }
+    h1{
+        font-size: 90px;
+        font-family: sans-serif;
+        font-weight: 900;
+        position: relative;
+        margin-top: 50px;
+        text-shadow: 2px 2px 10px black;
+    }
+    h2{
+        color: white;
+        text-shadow: none;
+        position: relative;
+        text-shadow: 2px 2px 10px black;
+    }
+    h2.fruit-pointer{
+        position: absolute;
+        top: 165px;
+        left: 200px;
+    }
+    h2.button-pointer{
+        position: absolute;
+        top: 257px;
+        left: 339px;
+        font-size: small;
+    }
+    h2.tileboard-pointer{
+        position: absolute;
+        top: 380px;
+        left: 100px;
+    }
+    h2.play-pause{
+        position: absolute;
+        top: 325px;
+        left: 200px;
+        font-size: medium;
+    }
+    h2.happy{
+        position: relative;
+        margin-top: 300px;
+        font-size: xx-large;
+    }
+}
+section.hidden{
+    display: none;
+}

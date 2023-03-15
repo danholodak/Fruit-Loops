@@ -5,15 +5,19 @@ import fruits from "./scripts/fruits"
 import TileBoard from "./scripts/tile_board"
 import PlayBar from "./scripts/play_bar"
 import ControlButtons from "./scripts/control_buttons";
+import Instruction from "./scripts/instruction"
 const tileboards = [];
 document.addEventListener("DOMContentLoaded", () => {
-   
+    let options ={closebutton: document.querySelector("button.close"), 
+    startbutton: document.querySelector("button.start"), 
+    box: document.querySelector("section.instructions")};
+    new Instruction(options);
     fruits.forEach(function(fruit){
         new FruitButton(fruit);
     })
     let numMeasures = 1;
     let parentEl = document.querySelector(".tile-board-and-playbar");
-    let options = {parentEl: parentEl};
+    options = {parentEl: parentEl};
     for (let i=0; i<numMeasures; i++){
         options = {id: i, parentEl: parentEl};
         new PlayBar(options);

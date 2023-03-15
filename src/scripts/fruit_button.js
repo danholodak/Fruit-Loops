@@ -1,4 +1,5 @@
 import NoteButton from "./note_button";
+import Label from "./label"
 const notes = ['c','d','e','f','g','a','b','cc']
 
 class FruitButton{
@@ -10,20 +11,35 @@ class FruitButton{
         this.populate()
         this.clickHandler = this.clickHandler.bind(this);
         this.element.addEventListener("click", this.clickHandler);
-
+        this.hover = this.hover.bind(this)
+        this.noHover = this.noHover.bind(this)
+        this.element.addEventListener("mouseover", this.hover);
+        this.element.addEventListener("mouseout", this.noHover);
+    }
+    hover(){
+        // debugger
+        this.label.element.classList.remove("hidden")
+    }
+    noHover(){
+        if (!this.label.element.classList.contains("hidden")){
+            this.label.element.classList.add("hidden")
+        }
     }
     populate(){
         let ul = document.querySelector("#instruments");
+        
         let li = document.createElement('li');
         this.element = li;
         li.innerText = this.emoji;
         li.id = this.id;
-        li.setAttribute("name", this.value)
         if (this.selected){
             li.classList.add('selected');
         }
         li.classList.add('fruit')
         ul.appendChild(li);
+        let options = {parent: li, value: this.value}
+        let label = new Label(options);
+        this.label = label;
         let div = document.querySelector("#fruits-and-notes");
         let notesUl = document.createElement('ul')
         notesUl.classList.add("hidden")
