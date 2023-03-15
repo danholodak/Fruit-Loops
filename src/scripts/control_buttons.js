@@ -1,10 +1,13 @@
-
+import demoBoardSetup from './demo'
 class ControlButtons{
     constructor(options){
+        
+        this.demoBoardSetup = demoBoardSetup;
         this.parentEl = options.parentEl;
         this.tileboard = options.tileboard;
         this.playing = false;
         this.bpms = 90;
+        this.savedBoard = null;
         this.ms = ((.04/this.bpms)* 60000); //equation converts bpms to ms per % of playbar crossed
         this.populate();
         //for animation
@@ -20,6 +23,58 @@ class ControlButtons{
         //button to clear board
         this.clearTheBoard = this.clearTheBoard.bind(this);
         this.clearBoard.addEventListener("click", this.clearTheBoard);
+        this.setupDemo = this.setupDemo.bind(this);
+        this.demo.addEventListener("click", this.setupDemo);
+        this.loadSave = this.loadSave.bind(this);
+        this.load.addEventListener("click", this.loadSave);
+        this.saveBoard = this.saveBoard.bind(this);
+        this.save.addEventListener("click", this.saveBoard);
+        
+
+    }
+    setupDemo(){
+        for (let i=0; i< this.tileboard.columns.length; i++){
+            for (let j=0; j< this.tileboard.columns[0].tileChildren.length; j++){
+                let child = this.tileboard.columns[i].tileChildren[j]
+                child.audio = this.demoBoardSetup[i][j].audio;
+                child.element.classList = this.demoBoardSetup[i][j].classList;
+                child.element.innerText = this.demoBoardSetup[i][j].emoji;
+            }
+        }
+
+    }
+    loadSave(){
+        if (this.savedBoard){
+            for (let i=0; i< this.tileboard.columns.length; i++){
+                for (let j=0; j< this.tileboard.columns[0].tileChildren.length; j++){
+                    let child = this.tileboard.columns[i].tileChildren[j]
+                    child.audio = this.savedBoard[i][j].audio;
+                    child.element.classList = this.savedBoard[i][j].classList;
+                    child.element.innerText = this.savedBoard[i][j].emoji;
+                }
+            }
+        }
+
+    }
+    saveBoard(){
+        this.savedBoard = []
+        for (let i=0; i< this.tileboard.columns.length; i++){
+            let column = []
+            for (let j=0; j< this.tileboard.columns[0].tileChildren.length; j++){
+                let child = this.tileboard.columns[i].tileChildren[j];
+                let classlist = ""
+                for(let a=0; a<child.element.classList.length; a++){
+                    classlist +=`${child.element.classList[a]}`;
+                    if (a<child.element.classList.length-1){
+                        classlist += " ";
+                    }
+                }
+                let childProperties = {audio: child.audio? child.audio : null, classList: classlist, emoji: child.element.innerText? child.element.innerText : "" };
+                column.push(childProperties);
+            }
+            this.savedBoard.push(column);
+        }
+
     }
     clearTheBoard(){
         for (let i=0; i< this.tileboard.columns.length; i++){
@@ -78,6 +133,18 @@ class ControlButtons{
         this.clearBoard = clearBoard;
         clearBoard.innerText = "Clear Board";
         this.element.append(clearBoard);
+        let demo = document.createElement('button');
+        this.demo = demo;
+        demo.innerText = "Demo Setup";
+        this.element.append(demo);
+        let save = document.createElement('button');
+        this.save = save;
+        save.innerText = "Save Loop";
+        this.element.append(save);
+        let load = document.createElement('button');
+        this.load =load;
+        load.innerText = "Load Saved Loop";
+        this.element.append(load);
     }
     PPclickHandler(){
         this.playhead = document.querySelector("img.playhead");

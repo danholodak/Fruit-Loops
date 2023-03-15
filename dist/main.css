@@ -360,7 +360,7 @@ section.instructions h2.fruit-pointer {
 section.instructions h2.button-pointer {
   position: absolute;
   top: 257px;
-  left: 339px;
+  left: 160px;
   font-size: small;
 }
 section.instructions h2.tileboard-pointer {
@@ -371,7 +371,7 @@ section.instructions h2.tileboard-pointer {
 section.instructions h2.play-pause {
   position: absolute;
   top: 325px;
-  left: 200px;
+  left: 105px;
   font-size: medium;
 }
 section.instructions h2.happy {
