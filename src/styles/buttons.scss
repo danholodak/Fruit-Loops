@@ -34,6 +34,10 @@ div.buttons{
     flex-direction: row;
     justify-content: space-evenly;
 }
+div.buttoncontainer{
+    width: 75%;
+    margin: auto;
+}
 section#bpm-control{
     display: flex;
     flex-direction: row;
