@@ -36,7 +36,7 @@ This project is written using vanilla Javascript/ HTML / CSS. The animation is a
 ![mockup](./fruit_loops_mockup.jpg?raw=true "Fruit Loops Mockup")
 
 Above is my original mockup, showing my decisionmaking for the general layout of the UI.
-And my notes about functionality:
+### And my notes about functionality:
 
     • fruits on the top represent instruments
     • colored tiles below represent notes and will appear/disappear as you select a fruit
@@ -48,7 +48,7 @@ And my notes about functionality:
 
 ## But how does it all work?
 
-The logic behind selecting a note is pretty simple
+### The logic behind selecting a note is pretty simple:
 ```javascript
 handleClick(){
         this.audio.play()
@@ -62,7 +62,7 @@ handleClick(){
 ```
 • The function, first, plays the note's associated audio file, then checks for a previously selected note and removes the 'selected' class from that, then adds the 'selected' class to the newly-clicked note.
 
-This is how a user can populate a space on the board
+### This is how a user can populate a space on the board
 
 ```javascript
     clickHandler(){
@@ -90,7 +90,7 @@ This is how a user can populate a space on the board
 
  • Or if the space is already populated (does not include the class 'empty') the function will simply clear out all the information.
 
-The logic behid how the animation and sound happens is a bit more complicated
+### The logic behind how the animation and sound happens is a bit more complicated:
 
 ```javascript
 PPclickHandler(){
@@ -129,7 +129,7 @@ PPclickHandler(){
     }
 ```
 
-### This function (the Play/Pause button click-handler) implements the main logic of the program. 
+### The above function implements the main logic of the program. 
 
 • It, first, finds the playhead for future animation, then it  changes the state from not playing to playing or vice versa and updates the button to reflect this.
 
