@@ -150,7 +150,6 @@ class ControlButtons{
         this.playhead = document.querySelector("img.playhead");
         this.playing = !this.playing;
         this.playing? this.PPElement.innerText = 'Pause' : this.PPElement.innerText = 'Play';
-        //console.log(this.playing? "playing" : "pausing")
         frame = frame.bind(this);
         if (this.playing){
             this.interval = setInterval(frame, this.ms);
@@ -158,13 +157,6 @@ class ControlButtons{
             clearInterval(this.interval);
         }
         function frame(){
-            if (this.pos===0){
-                for(let i=0; i<this.tileboard.columns.length; i++){
-                    this.tileboard.columns[i].tileChildren.forEach(function(child){
-                        child.played = false;
-                    })
-                }
-            }
             if (this.pos < 99) {
                 this.pos++;
                 this.playhead.style.marginLeft = this.pos + "%"; 
@@ -179,6 +171,11 @@ class ControlButtons{
                 
               } else {
                 this.pos = 0;
+                for(let i=0; i<this.tileboard.columns.length; i++){
+                    this.tileboard.columns[i].tileChildren.forEach(function(child){
+                        child.played = false;
+                    })
+                }
               }
         }
     
