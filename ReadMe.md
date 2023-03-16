@@ -3,7 +3,7 @@
 ![screenshot](./fl_screenshot.png "Fruit Loops Screenshot")
 ## Description:
 Fruit Loops is a browser based demo based on the functionality of a drum pad or sequencer. 
-It allows users to make simple beats or music that can loop infinitely.
+It allows users to make a simple bit of music that can loop infinitely.
 
 ## Functionality:
 All the functionality is controlled by clicking different page elements.
@@ -60,7 +60,7 @@ handleClick(){
         this.selected = !this.selected;
     }
 ```
-    • The function, first, plays the note's associated audio file, then checks for a previously selected note and removes the 'selected' class from that, then adds the 'selected' class to the newly-clicked note.
+• The function, first, plays the note's associated audio file, then checks for a previously selected note and removes the 'selected' class from that, then adds the 'selected' class to the newly-clicked note.
 
 This is how a user can populate a space on the board
 
@@ -86,8 +86,9 @@ This is how a user can populate a space on the board
     }
 
 ```
-     •The function grabs information from the note the user has selected and populates the board space with the same information (classes to determine styling, inner text to put the correct emoji, and a file path to connect an audio file). 
-     •Or if the space is already populated (does not include the class 'empty') the function will simply clear out all the information.
+ • The function grabs information from the note the user has selected and populates the board space with the same information (classes to determine styling, inner text to put the correct emoji, and a file path to connect an audio file). 
+
+ • Or if the space is already populated (does not include the class 'empty') the function will simply clear out all the information.
 
 The logic behid how the animation and sound happens is a bit more complicated
 
@@ -128,19 +129,19 @@ PPclickHandler(){
     }
 ```
 
-This function (the Play/Pause button click-handler) implements the main logic of the program. 
+### This function (the Play/Pause button click-handler) implements the main logic of the program. 
 
-    • It, first, finds the playhead for future animation, then it  changes the state from not playing to playing or vice versa and updates the button to reflect this.
+• It, first, finds the playhead for future animation, then it  changes the state from not playing to playing or vice versa and updates the button to reflect this.
 
-    • Next, if playing, it calls the animation function (frame) and if pausing it stops that same function. 
+• Next, if playing, it calls the animation function (frame) and if pausing it stops that same function. 
 
-    • The interval(in milliseconds) at which it keeps calling the frame function is determined by an equation that converts beats per minute to milliseconds for each one percent of the playbar crossed (.04/bpms * 60,000 = ms).
+• The interval(in milliseconds) at which it keeps calling the frame function is determined by an equation that converts beats per minute to milliseconds for each one percent of the playbar crossed (.04/bpms * 60,000 = ms).
 
-    • Within the animation function, it changes the position of the playhead in relation to the playbar by 1% of the playbar width. Then it converts this position to the index of one column of tiles by dividing by 6.25 (1/16 of 100%) and rounding down to an integer.
+• Within the animation function, it changes the position of the playhead in relation to the playbar by 1% of the playbar width. Then it converts this position to the index of one column of tiles by dividing by 6.25 (1/16 of 100%) and rounding down to an integer.
 
-    • We then loop through the tiles at that column, if an occupied tile is found that hasn't been played, the audio and glow function is triggered and played state is flipped.
+• We then loop through the tiles at that column, if an occupied tile is found that hasn't been played, the audio and glow function is triggered and played state is flipped.
 
-    • Lastly, every time the position reaches the end it's reset to zero and the played state of all the tiles is reverted to not played.
+• Lastly, every time the position reaches the end it's reset to zero and the played state of all the tiles is reverted to not played.
 
 
 
@@ -177,7 +178,7 @@ Thursday Morning:
     • Finish Production Readme
 
 
-Future implementations:
+## Future functionality to implement:
 
     • User can download their loop as a single mp3 file
     • User can share their loop with friends
