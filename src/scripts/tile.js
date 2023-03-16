@@ -31,7 +31,7 @@ class Tile{
                 this.element.classList.add("active");
                 this.element.innerText = selectedSound.innerText;
                 let instrument = selectedSound.parentElement.id;
-                this.audio = new Audio(`https://github.com/danholodak/Fruit-Loops/blob/main/src/sounds/${instrument}/${selectedNote}.mp3?raw=true`)
+                this.audio = new Audio(`./src/sounds/${instrument}/${val}.mp3`)
             }
             
         }
