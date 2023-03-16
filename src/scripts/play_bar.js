@@ -10,7 +10,7 @@ class PlayBar{
         div.classList.add("playbar")
         let playhead = document.createElement('img')
         playhead.classList.add("playhead")
-        playhead.src = '../../images/playhead.png'
+        playhead.src = './images/playhead.png'
         div.appendChild(playhead)
         this.parentEl.appendChild(div)
     }
