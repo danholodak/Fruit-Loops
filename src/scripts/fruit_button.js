@@ -47,7 +47,7 @@ class FruitButton{
         let instrument = this.value
         notes.forEach(function(val){
             let options = {emoji: emoj, id: val,
-                parent: notesUl, audio: new Audio(`../src/sounds/${instrument}/${val}.mp3`)}
+                parent: notesUl, audio: new Audio(`./src/sounds/${instrument}/${val}.mp3`)}
             new NoteButton(options)
         })
         div.appendChild(notesUl)
