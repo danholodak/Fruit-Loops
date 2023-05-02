@@ -62,7 +62,7 @@ handleClick(){
 ```
 • The function, first, plays the note's associated audio file, then checks for a previously selected note and removes the 'selected' class from that, then adds the 'selected' class to the newly-clicked note.
 
-### This is how a user can populate a space on the board
+### This is how a user can populate a space on the board:
 
 ```javascript
     clickHandler(){
@@ -184,3 +184,9 @@ Thursday Morning:
     • User can share their loop with friends
     • User can add custom emoji-instruments with uploaded sound files.
     • User can change their loop length to multiple measures
+
+## To download and run this locally:
+
+    • User can download their loop as a single mp3 file
+    • User can share their loop with friends
+

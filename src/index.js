@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const tileboards = [];
     let options ={closebutton: document.querySelector("button.close"), 
     startbutton: document.querySelector("button.start"), 
-    box: document.querySelector("section.instructions")};
+    box: document.querySelector("section.instructions"), 
+    instructionButton: document.querySelector("button.instruction-button")};
     new Instruction(options);
     fruits.forEach(function(fruit){
         new FruitButton(fruit);
