@@ -187,6 +187,8 @@ Thursday Morning:
 
 ## To download and run this locally:
 
-    • User can download their loop as a single mp3 file
-    • User can share their loop with friends
+    • clone the repo or download zip
+    • cd into the folder and run command `bundle install` in terminal
+    • then run command `npm run watch` for dev environment or `npm start` for production
+    • open index.html file in a web browser
 
